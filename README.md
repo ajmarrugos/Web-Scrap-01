@@ -1,23 +1,34 @@
 # WebScrapping Project
 
-- This program will allow User to gain Job Offers from a predifined URL option.
-- The program function as A WebScrapping interface to handle the extracted data to review it in the Console.
-- Once this data is approved the User can export this to a JSON format or Send it and load it to a MySQL Server.
+### Project designed with the purpose to get information from Job Posting webpages.
+### Will allow the user to get Job Offers data, like:
+- Company or Enterprise name
+- Job Position
+- Salary
 
+## Features
+- Will have built-in options to make URL request to some kind of webpages.
+- Will have an interface to guide the user to use the WebScrapping Engine.
+- The Engine will extract data from webpage to create instances that can be reviewed in the Console.
+- Once this data is processed and approved, the User can export this to a JSON format or Send it and load it to a MySQL Server.
 
 ## Usage
 
-- Interactive
-- No Interactive
+- Interactive (Main program to execute and interact through console)
+- Non Interactive (Set of scripts with predefined options to process requests)
 
-## Intercative Mode Flow
+## Non Interactive Mode
+./WebScrapURL.py
+- Options: 1,2,3 / 1,2,3 (Look interactive)
 
-### 1. Start the Interface: ./WebScrapBro.py
+## Interactive Mode Flow
+
+### 1. Start the Interface
+./WebScrapBRO.py
 
 ### 2. Interface: First Argument
 
 The user will be asked to prompt an option to get the technology he/she is looking to work for. The options will be listed and shown as and Integer argument.
-
 This options will be shown like this:
 
 1. Python
@@ -89,3 +100,13 @@ Option 1: Offer 1
 - Send to SQL Server (Interface will ask for Server IP and User credentials)
 - Abort (Return to step 6: Show Data)
 - Exit (Cleans the chache an closes the program)
+
+### AUTHORS
+- Pablo Agudelo
+- Víctor Uroza
+- Alejandro Urán
+- Alberto Marrugo
+
+### COMPANIES INVOLVED
+- Holberton School
+- Hitch.ai
