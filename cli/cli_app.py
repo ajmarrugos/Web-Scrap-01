@@ -2,16 +2,11 @@
 """ Contains the CLI that guides the user
     on the use of the WebScrapping Tool
 """
-from ast import Num
 import json
 import math
-from tkinter import N
-from urllib import response
-import requests
 from time import sleep
 from var_pack import msg
 from datetime import datetime
-from bs4 import BeautifulSoup
 
 # Wait time controller
 sleep_time = 1
@@ -178,7 +173,7 @@ def request_caller():
     global num_pages;
 
     data_list = list()
-    for page in range(20info_scrapper:
+    for page in range(info_scrapper):
         offers = offer_getter(page)
         for x in offers:
             data_list.append(info_scrapper(x))
@@ -188,7 +183,7 @@ def request_caller():
         json.dump(data_list, jsonfile, ensure_ascii=False)
         print(f'PAGE {page} --- Data retrieval completed!')
 
-def offer_getter(url):
+def offer_getter():
     """  """
     global headers, url_list;
 
@@ -200,6 +195,7 @@ def offer_getter(url):
 
     print(url_list[0])
     print(offer_urls)
+
 
 def info_scrapper(url):
     """ """
@@ -254,7 +250,6 @@ def info_scrapper(url):
     except:
         buffer['Salary'] = 'N/A'
         print(msg.didnot_get)
-
 
 step0();
 step1();
