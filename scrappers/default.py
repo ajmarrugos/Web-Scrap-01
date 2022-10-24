@@ -1,4 +1,14 @@
+#!/usr/bin/python3
+""" Contains the default WebScrapper Processor for:
+    Computrabajo domains to get Job Offers data
+"""
 
+import requests
+from cli import cli_app
+from var_pack import msg
+from bs4 import BeautifulSoup
+
+url_list = []
 
 def offer_getter():
     """  """
