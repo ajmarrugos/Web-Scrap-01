@@ -1,0 +1,117 @@
+.custom-header {
+  padding: 20px 40px;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 0;
+  font-family: "Quicksand", sans-serif;
+}
+
+.custom-header a.navbar-brand {
+  color: #fff;
+  font: normal 28px Quicksand, Arial, Helvetica, sans-serif;
+  line-height: 0.5;
+  margin-right: 40px;
+
+}
+
+.custom-header a.navbar-brand span {
+  color: #bc40df;
+}
+
+.custom-header ul.nav.navbar-nav.links li a {
+  font: 14px Arial, Helvetica, sans-serif;
+  opacity: 0.9;
+  text-decoration: none;
+  color: #fff;
+  border: 0;
+}
+.navbar-expand-md .navbar-nav .nav-link {
+  padding-right: var(--bs-navbar-nav-link-padding-x);
+  padding-left: var(--bs-navbar-nav-link-padding-x);
+  margin-left: 100px;
+  text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+.custom-header ul.nav.navbar-nav li a:hover {
+  opacity: 1;
+}
+
+.custom-header .badge {
+  position: absolute;
+  top: 4px;
+  border-radius: 2px;
+  font-size: 11px;
+  color: #fff;
+  background-color: #2A6A92;
+  padding: 2px 4px;
+  font-weight: normal;
+}
+
+.custom-header li.dropdown .dropdown-toggle {
+  border-radius: 2px;
+  color: #fff;
+  padding: 8px 14px;
+  opacity: 0.9;
+  border: 0;
+  margin: 0;
+  
+}
+
+.custom-header li.dropdown .dropdown-toggle:focus, .custom-header li.dropdown .dropdown-toggle:hover, .custom-header li.dropdown .dropdown-toggle:active {
+  color: #fff;
+}
+
+.custom-header ul.nav.navbar-nav.navbar-right .dropdown li a {
+  font: bold 13px Arial, sans-serif, quicksand;
+}
+
+img.dropdown-image {
+  border-radius: 50%;
+  width: 32px;
+  margin-left: 10px;
+}
+
+.custom-header .dropdown ul {
+  background-color: #ffffff;
+  border: 0;
+  min-width: 140px;
+}
+
+.custom-header .dropdown ul li {
+  background-color: #ffffff;
+  padding: 7px;
+  text-align: center;
+}
+
+.custom-header .dropdown ul li a {
+  background: #ffffff;
+  border-radius: 2px;
+  color: #fff;
+  padding: 0;
+  text-align: center;
+}
+
+.custom-header .dropdown ul li.active a {
+  color: #e9ac09 !important;
+}
+
+.nav-link {
+  display: block;
+  padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
+  font-size: var(--bs-nav-link-font-size);
+  font-weight: var(--bs-nav-link-font-weight);
+  color: rgba(255, 255, 255, 0.958);
+  text-decoration: none;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+}
+
+footer {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  background-color: #f5f5f5;
+  font-size: 12px;
+  padding: 5px;
+}
