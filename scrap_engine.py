@@ -16,27 +16,33 @@ from db.models.job_offer import JobOffer
 headers = {
         'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
 
-dom = "mx"
 pag = "computrabajo.com/"
+dom = "ar"
 pos =  "desarrollador"
-num_offers = ""
+num_offers = "25"
 
 page = ""
 search = ""
 
+def welcome():
+    print(msg.welcome)
+    print(msg.intro1)
+    print(msg.intro2)
+
 def time_bar():
+    """ """
     now = datetime.now()
     ct = now.strftime("%H:%M:%S")
     print("\n" + msg.bar + ct + "\n")
 
 def url_builder(dom, pag, pos):
-    """c"""
+    """ """
     global page, search;
-
+    #
     page = 'https://' + dom + '.' + pag
-
+    #
     search = 'trabajo-de-' + pos + '?p='
-
+    #
     return(page + search)
 
 
@@ -145,19 +151,23 @@ def request_trigger(num_offers):
             print("Extracting data from Offer # " + str(x))
             print(offers)
 
+            # 
             got_dictionary = job_scrapper(offers)
             data_list.append(got_dictionary)
 
+            #
             current_offer = JobOffer(**got_dictionary)
             storage.new(current_offer)
             storage.save()
             print('Data saved')
 
+    #
     with open("output_data.json", "w+") as jsonfile:
-        json.dump(data_list, jsonfile)
+        json.dump(data_list, jsonfile, ensure_ascii=False)
         print(f'PAGE {page} --- Data saved!')
 
+welcome();
 
 url_builder(dom, pag, pos);
 
-request_trigger(15);
+request_trigger(num_offers);
