@@ -17,9 +17,9 @@ headers = {
         'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
 
 pag = "computrabajo.com/"
-dom = "ar"
-pos =  "desarrollador"
-num_offers = "25"
+dom = "co"
+pos =  "abogado"
+num_offers = "19"
 
 page = ""
 search = ""
@@ -91,8 +91,8 @@ def job_scrapper(url):
 
     # Get Company Name
     try:
-        comp_name = soup.find('a', {'class': 'dIB fs16 js-o-link'}).text
-        buffer['Company'] = comp_name
+        company = soup.find('a', {'class': 'dIB fs16 js-o-link'}).text
+        buffer['Company'] = company
         print(buffer)
     except:
         buffer['Company'] = 'N/A'
@@ -117,6 +117,17 @@ def job_scrapper(url):
     except:
         buffer['Description'] = 'N/A'
         print(buffer)
+        print("\n" + msg.didnot_get)
+
+    # Get Offer requirements
+    try:
+        requirements = ''
+        reqmnt = soup.find('ul', {'class': 'disc mbB'}).find_all('li')
+        for i in reqmnt:
+            requirements = requirements + i.text + ';'
+        buffer['Requirements'] = requirements
+    except:
+        buffer['Requirements'] = 'N/A'
         print("\n" + msg.didnot_get)
 
     # Get Offer Salary
@@ -150,12 +161,8 @@ def request_trigger(num_offers):
             time_bar()
             print("Extracting data from Offer # " + str(x))
             print(offers)
-
-            # 
             got_dictionary = job_scrapper(offers)
             data_list.append(got_dictionary)
-
-            #
             current_offer = JobOffer(**got_dictionary)
             storage.new(current_offer)
             storage.save()

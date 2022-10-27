@@ -60,11 +60,9 @@ class JobOffer(Base):
         storage.delete(self)
 
 
-    url_empleo = Column(String(128))
-    fecha_recuperacion = Column(String(60))
-    Titulo_oferta = Column(String(60))
-    Empresa = Column(String(60))
-    Ubicacion = Column(String(60))
-    Descripcion = Column(String(1000))
-    Requerimientos = Column(String(256))
-    Salario = Column(String(60))
+    offer_tittle = Column(String(60))
+    company = Column(String(60))
+    location = Column(String(60))
+    description = Column(String(1000))
+    requirements = Column(String(256))
+    salary = Column(String(60))

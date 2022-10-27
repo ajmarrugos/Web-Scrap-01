@@ -16,7 +16,7 @@ class DBStorage:
         user = 'user1'
         pwd = 'GG8nDrzqWkP!aapgDsYrfw.p'
         host = 'holberton.cm8wxkustwc4.us-east-1.rds.amazonaws.com'
-        db = 'hitch_job_offers'
+        db = 'hitch_job_db'
         self.__engine = create_engine("mysql+mysqldb://{}:{}@{}/{}".format(
                                     user, pwd, host, db), pool_pre_ping=True)
 
