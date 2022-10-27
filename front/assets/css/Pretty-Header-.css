@@ -7,11 +7,11 @@
 }
 
 .custom-header a.navbar-brand {
-  color: #fff;
+  color: white;
   font: normal 28px Quicksand, Arial, Helvetica, sans-serif;
-  line-height: 0.5;
+  text-shadow: 0 2px black;
+  line-height: 1.5;
   margin-right: 40px;
-
 }
 
 .custom-header a.navbar-brand span {
@@ -103,6 +103,12 @@ img.dropdown-image {
   color: rgba(255, 255, 255, 0.958);
   text-decoration: none;
   transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+}
+
+.navbar-expand-md .navbar-collapse {
+  display: flex!important;
+  flex-basis: auto;
+  margin-left: 100px;
 }
 
 footer {
